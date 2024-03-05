@@ -1,5 +1,7 @@
 <h1>Books</h1>
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
+
+
+
 
     <div class = "table">
         <div class = "table-head">title</div>
@@ -7,22 +9,22 @@
         <div class = "table-head">option</div>
         
         <div class = "table-body">
-            <tb>
-                <tp>リーダブルコード</tp>
-                <tp>より良いコードを書くためのシンプルで実践的なテクニック</tp>
-                <tp>
+            <tp>
+                <p>リーダブルコード</p>
+                <p>より良いコードを書くためのシンプルで実践的なテクニック</p>
+                <p>
                     <a href = "/books/207424">Show</a>
-                </tp>
-                <tp>
+                </p>
+                <p>
                     <a href = "/books/207432">Edit</a>
-                </tp>
-                <tp>
+                </p>
+                <p>
                     <a href = "/books/207432">Destroy</a>
-                </tp>
-            </tb>
-            <tb>
+                </p>
+            </tp>
+            <tp>
                 
-            </tb>
+            </tp>
             
         </div>
         
@@ -31,7 +33,7 @@
 
 
 <h2>New Book</h2>
-
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
     
     <h5>title</h5>
     <%= f.text_field :title %>
