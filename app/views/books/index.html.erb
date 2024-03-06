@@ -1,37 +1,20 @@
+<div class = "watch">
+
 <h1>Books</h1>
+<%= form_with model: @book, url: books_path, method: :post, local: true do |f| %>
 
+    <p>title</p>
+    <%= f.text_field :title %>
 
+    <p>body</p>
+     <%= f.text_area :body %>
+    
+    <%= f.submit 'Create Book' %>
 
+<% end %>    
+</div>
 
-    <div class = "table">
-        <div class = "table-head">title</div>
-        <div class = "table-head">body</div>
-        <div class = "table-head">option</div>
-        
-        <div class = "table-body">
-            <tp>
-                <p>リーダブルコード</p>
-                <p>より良いコードを書くためのシンプルで実践的なテクニック</p>
-                <p>
-                    <a href = "/books/207424">Show</a>
-                </p>
-                <p>
-                    <a href = "/books/207432">Edit</a>
-                </p>
-                <p>
-                    <a href = "/books/207432">Destroy</a>
-                </p>
-            </tp>
-            <tp>
-                
-            </tp>
-            
-        </div>
-        
-    </div>
-
-
-
+<div class ="New book">
 <h2>New Book</h2>
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
     
@@ -43,3 +26,4 @@
     <%= f.submit 'Create Book' %>
     
 <% end %>
+</div>
