@@ -1,7 +1,7 @@
 <h1>Books</h1>
 <%= form_with model: @book, url: 'books', method: :post do |f| %>
-<p>Find me in app/views/books/new.html.erb</p>
-
+<p><%= @book.title %></p>
+<p><%= @book.body %></p>
 
 <h2>New Book</h2>
 

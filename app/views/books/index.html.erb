@@ -1,17 +1,22 @@
-<div class = "watch">
+
 
 <h1>Books</h1>
-<%= form_with model: @book, url: books_path, method: :post, local: true do |f| %>
+<% @books.each do |book| %>
+  <p>title</p>
+      <%= book.title %>
+　<p>body</p>
+    　<%= book.body %>
+      <%= link_to "show", book_path(book) %>
+      <%= link_to "edit", book_path(book) %>
+      <%= link_to "deestroy", book_path(book), method: :delete, date: {confirm: "本当に削除しますか？", turbo_confirm: "confirm"} %>
+  
+<% end %>
 
-    <p>title</p>
-    <%= f.text_field :title %>
 
-    <p>body</p>
-     <%= f.text_area :body %>
-    
-    <%= f.submit 'Create Book' %>
+  
 
-<% end %>    
+
+
 </div>
 
 <div class ="New book">
@@ -25,5 +30,8 @@
     
     <%= f.submit 'Create Book' %>
     
+   
+    
 <% end %>
+
 </div>
