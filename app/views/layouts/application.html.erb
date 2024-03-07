@@ -15,7 +15,7 @@
   <main>
     <div>
     <% flash.each do |message_type, message| %>
-      <div class="flash-message noticce">Book was successfully created.</div>
+      <div class="flash-message noticce"><%= message %></div>
       
     <% end %>
     </div>
