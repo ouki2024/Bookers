@@ -14,13 +14,13 @@
  *= require_self
  */
 * {
-  margin: 0;
-  padding: 20px 0;
+  margin: 10px;
+  padding: 0;
 }
 
 .top {
   margin: 30px;
-  padding: 20px 0;
+  padding: 0;
 }
 
 .top-mini {
@@ -35,9 +35,7 @@
   padding: 10px;
 }
 
-.flash-message-succss {
- padding: 16px 24px;
-  margin: 16px 0px;
+.flash-message-notice {
   color: #00cc00;
 }
 

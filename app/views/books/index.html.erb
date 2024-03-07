@@ -32,7 +32,6 @@
 
 <h2>New Book</h2>
 
-
 <div class ="flash-message-error">
 <% if @book.errors.any? %>
   <%= @book.errors.count %>errors prohibited this book from being saved:
@@ -42,9 +41,9 @@
     <% end %>
   </ul>
 <% end %>
-</div>
 
-<div class ="flash-message-succss">
+
+
 <% if flash[:notice].present? %>
   <p><%= flash[:notice] %></p>
 <% end %>
