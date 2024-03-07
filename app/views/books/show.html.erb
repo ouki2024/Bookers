@@ -1,11 +1,13 @@
 
+
 <div class = "Show" >
   <p>title</P>
     <p><%= @book.title %></p>
   <p>body</p>
     <p><%= @book.body %></p>
+   
 </div>
 
     <%= link_to "Edit", edit_book_path(@book.id) %>
     <%= link_to "back", books_path %>
-  
+    <%= link_to "destroy", book_path(@book.id), method: :delete, data: {confirm: "Are you sure？"} %>

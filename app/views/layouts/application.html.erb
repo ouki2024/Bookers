@@ -12,7 +12,14 @@
 
   <body>
     
-    
+  <main>
+    <div>
+    <% flash.each do |message_type, message| %>
+      <div class="flash-message noticce">Book was successfully created.</div>
+      
+    <% end %>
+    </div>
     <%= yield %>
+  </main>
   </body>
 </html>
